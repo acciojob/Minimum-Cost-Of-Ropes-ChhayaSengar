@@ -11,14 +11,13 @@ function calculateMinCost() {
 	inputArr.sort(function (a,b) {return a-b;});
    while (inputArr.length>1) {
    	 var newRope = inputArr[0] + inputArr[1];
-	   cost +=newRope;
+	   cost += newRope;
 
 	   //delete first two element
 	   inputArr.splice(0,2);
-	   inputArr.push(newRepo);
-
-	   inputArr.sort(function (a,b) {return a-b;})
+	   inputArr.push(newRope);
+      inputArr.sort(function (a,b) {return a-b;})
    }
-	document.querySelector("#result").value =cost;
+	document.querySelector("#result").textContent = cost;
   
 }  
